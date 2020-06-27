@@ -18,9 +18,7 @@ def findLastRow(tabulka):
             main = False
             return index
 def writeToLastRow(tabulka, lastrowindex, datum, jmeno, cena, workbook):
-    tabulka["A" + str(lastrowindex)].value = datum
-    tabulka["B" + str(lastrowindex)].value = jmeno
-    tabulka["C" + str(lastrowindex)].value = cena + "kc"
+    tabulka["A" + str(lastrowindex)].value,tabulka["B" + str(lastrowindex)].value,tabulka["C" + str(lastrowindex)].value = datum, jmeno, cena + "kc"
     workbook.save("test.xlsx")
     dalsi = input("chcete zadat dalsi produkt? y/n")
     if dalsi == "y":
