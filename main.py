@@ -25,6 +25,7 @@ def writeToLastRow(tabulka, lastrowindex, datum, jmeno, cena, workbook):
     dalsi = input("chcete zadat dalsi produkt? y/n")
     if dalsi == "y":
         writeToLastRow(sheet, findLastRow(sheet),input("Zadej datum: "),input("\nZadej jmeno produktu: "),input("\nZadej cenu produktu: "), wb )
+        print("Polozka uspesne pridana.")
     else:
         pass
 writeToLastRow(sheet, findLastRow(sheet),input("Zadej datum: "),input("\nZadej jmeno produktu: "),input("\nZadej cenu produktu: "), wb )
