@@ -22,7 +22,7 @@ def writeToLastRow(tabulka, lastrowindex, datum, jmeno, cena, workbook):
     tabulka["B" + str(lastrowindex)].value = jmeno
     tabulka["C" + str(lastrowindex)].value = cena + "kc"
     workbook.save("test.xlsx")
-    dalsi = input("chcete zadat dalsi produkt?")
+    dalsi = input("chcete zadat dalsi produkt? y/n")
     if dalsi == "y":
         writeToLastRow(sheet, findLastRow(sheet),input("Zadej datum: "),input("\nZadej jmeno produktu: "),input("\nZadej cenu produktu: "), wb )
     else:
