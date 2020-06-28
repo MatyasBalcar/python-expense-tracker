@@ -25,9 +25,7 @@ def getSum(rowsNum, tabulka):
     return sumOfPrices
 
 def writeToLastRow(tabulka, lastrowindex, datum, jmeno, cena, workbook):
-    tabulka["A" + str(lastrowindex)].value = datum
-    tabulka["B" + str(lastrowindex)].value = jmeno
-    tabulka["C" + str(lastrowindex)].value = cena 
+    tabulka["A" + str(lastrowindex)].value,tabulka["B" + str(lastrowindex)].value,tabulka["C" + str(lastrowindex)].value = datum, jmeno, cena 
     workbook.save("test.xlsx")
     dalsi = input("Pro pridani produktu zadej [y] a pro zobrazeni souctu cen napis [s]")
     if dalsi == "y":
